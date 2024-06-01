@@ -61,9 +61,7 @@ public class FloatingPointBinaryEncoders {
                 // adding necessary zeros to the right
                 int numZeros = mantissaSize - meaningfulBits.length();
                 StringBuilder sb = new StringBuilder(meaningfulBits);
-                for (int i = 0; i < numZeros; i++) {
-                    sb.append("0");
-                }
+                sb.append("0".repeat(numZeros));
                 return sb.toString();
             }
 
